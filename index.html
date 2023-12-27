@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping coming soon</title>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+
+    <!-- remix icon -->
+    <link rel="stylesheet" href="remixicon/remixicon.css">
+</head>
+<body>
+    <div class="navbar">ping<span>.</span></div>
+
+    <h1 class="main-text">We are launching <strong>soon!</strong></h1>
+    <p class="sub-text">Subscribe and get notified</p>
+
+    <div class="form_container">
+        <input type="email" id="email" required placeholder="Your email address...">
+        <button class="cta" onclick="validateEmail()">Notify Me</button>
+        <p id="result" clas="success-message"></p>
+    </div>
+
+    <div class="img_container">
+        <img src="images/illustration-dashboard.png" alt="main img" class="main_img">
+    </div>
+
+    <div class="footer">
+        <div class="icons">
+            <div class="icon-list"><i class="ri-facebook-fill"></i></div>
+            <div class="icon-list"><i class="ri-twitter-fill"></i></div>
+            <div class="icon-list"><i class="ri-instagram-line"></i></div>
+        </div>
+
+        <p class="copyright">
+            © Copyright Ping. All right reserved.
+        </p>
+    </div>
+
+
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const resultElement = document.getElementById('result');
+
+            // regular expression for basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(emailInput.value)) {
+                resultElement.className = 'success-message';
+                resultElement.textContent = '';
+                emailInput.style.border = "1px solid gray"
+            } else {
+                resultElement.className = 'error-message';
+                emailInput.style.border = "1px solid red";
+                resultElement.textContent = 'Please provide a valid email address'
+            }
+        }
+    </script>
+</body>
+</html>

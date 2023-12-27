@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    /* primary colors */
+    --blue: hsl(223, 87%, 63%);
+
+    /* secondary colors */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+
+    /* neutral colors */
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+
+    /* typography */
+    --fs-regular: 20px;
+    
+    --fw-300: 300;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin',sans-serif;
+}
+
+body {
+    padding: 5% 30%;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    text-align: center;
+    font-weight: var(--fw-700);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding-top: 3.5rem;
+}
+
+.navbar > span {
+    font-weight: var(--fw-700);
+    color: var(--blue);
+}
+
+.main-text {
+    font-weight: var(--fw-300);
+    color: var(--gray);
+    padding-top: 1.4rem;
+    font-size: 2.5rem;
+}
+
+.main-text > strong {
+    font-weight: var(--fw-700);
+    color: #000;
+}
+
+.sub-text {
+    padding-top: 1rem;
+    font-weight: var(--fw-300);
+}
+
+.form_container {
+    padding-top: 1.45rem;
+    padding-bottom: 1rem;
+}
+
+.form_container input {
+    padding: 0.9rem 0.6rem;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid var(--gray);
+    width: 350px;
+}
+
+.form_container .cta {
+    background: var(--blue);
+    padding: 0.9rem 0.6rem;
+    text-align: center;
+    border-radius: 2rem;
+    color: #fff;
+    border: none;
+    width: 130px;
+    cursor: pointer;
+}
+
+.main_img {
+    width: 100%;
+}
+
+/* error messages */
+.error-message {
+    color: var(--light-red);
+    font-size: 15px;
+}
+
+#result {
+    color: var(--light-red);
+    font-size: 13px;
+}
+
+
+.footer {
+    color: var(--pale-blue);
+    padding-block: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .icons {
+    display: flex;
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.icons .icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.icon-list i {
+    padding: .5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.icon-list i:hover {
+    background: var(--blue);
+    color: #fff;  
+}
+
+.copyright {
+    color: var(--gray);
+    text-align: center;
+}
